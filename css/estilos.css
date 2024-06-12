@@ -1,0 +1,442 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,500;1,600&display=swap');
+
+/*css globales*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+
+    background-color: #f4f4f4;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/*esto es para el footer*/
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Espacio entre los iconos*/
+    padding: 20px 0; /* Espacio superior e inferior */
+}
+
+/* Estilo de las redes*/
+.redes-sociales a {
+    font-size: 30px; 
+    color: #2b2727; 
+    text-decoration: none; /* sin subrayado */
+    transition: color 0.3s; 
+}
+
+.redes-sociales a:hover {
+    color: #f2abb7; 
+}
+
+header {
+    position: relative;
+}
+
+header div img {
+    width: 100%;
+    height: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#logo {
+    width: 20%;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Media Query responsive */
+@media (max-width: 768px) {
+    #logo {
+        width: 40%;
+        top: 30px;
+    }
+    .link-navegation{
+        margin-top: 30px;
+      }
+}
+
+@media (max-width: 480px) {
+    #logo {
+        width: 60%;
+        top: 20px;
+    }
+
+    .div-h1 h1{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .titulo_destacados h2{
+        font-size: 20px;
+    }
+}
+
+/* Estilos para la navegación */
+.link-navegation {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.link-navegation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: nowrap; /* No permite que los elementos se envuelvan */
+    justify-content: center; /* Centra los elementos en el contenedor */
+    gap: 5px; /* Espacio entre los elementos */
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.link-navegation li {
+    flex: 1; 
+    text-align: center; 
+    min-width: 60px; 
+}
+
+.link-navegation a {
+    display: block;
+    padding: 10px 5px;
+    text-decoration: none;
+    color: #333;
+    font-size: 12px; /* ajusta el tamaño de la fuente */
+}
+
+.link-navegation a:hover {
+    background-color: #ddd; 
+}
+
+/* Media Query espaciado en pantallas pequeñas */
+@media (max-width: 370px) {
+    .link-navegation ul {
+        flex-wrap: nowrap; /*no se envuelvan */
+    }
+
+    .link-navegation li {
+        margin: 1px; /* Ajusta margen pantalla pequeña */
+        flex: 1 1 auto; /* Permite que los elementos se ajusten automáticamente */
+    }
+
+    .link-navegation a {
+        padding: 5px 2px; 
+        font-size: 10px; 
+    }
+}
+
+/*-----------------------------------------------------------*/
+
+/* este contenedor es de la pagina inicio*/
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+}
+
+section {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    /* aca con este ajusto el tamaño máximo de la imagen*/
+    height: auto;
+    /* aca me ajusta la altura automáticamente */
+    width: 200px;
+}
+
+section #propaganda{
+   
+   padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+video {
+    max-width: 80%;
+    height: auto;
+}
+
+/* Media query para dispositivos máximo de 768px */
+@media (max-width: 768px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+      
+    }
+}
+
+/* este contenedor es de la pagina productos*/
+.contenedor_productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid: 20px;
+
+}
+
+/*este contenedor pagina principal*/
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid: 20px;
+}
+
+.contenedor_productos>section {
+    margin: 10px 0;
+}
+
+figure>img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 20px 20px 0 0;
+}
+
+.div-h1 {
+    text-align: center;
+}
+
+.titulo_destacados {
+    padding-bottom: 50px;
+    text-indent: 40px;
+}
+
+.texto_principal_productos {
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.texto_compra {
+    list-style-type: none;
+    text-align: justify;
+    padding-top: 10px;
+    text-indent: 40px;
+    background-color: #fac8d0;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto_compra ul {
+    background-color: #fac8d0;
+    margin-bottom: 3px;
+    padding: 1px;
+
+}
+
+.titulo2 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.titulo3 {
+    padding-top: 20px;
+}
+
+#formas_pago {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Agrandar al 150% no se agrando por regla imag*/
+}
+.titulo4{
+    text-align: center;
+}
+.titulo3{
+        text-align: center;
+}
+.contenedor_envio {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    /* Apila los elementos uno debajo del otro */
+    align-items: flex-start;
+}
+
+.contenedor_promociones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid: 20px;
+    padding-top: 30px;
+    /* Espacio en la parte superior */
+
+}
+
+.menu_productos {
+    padding: 0 px;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 10px;
+}
+
+/*pagina contacto*/
+.contacto{
+    padding-top: 50px;
+   text-align: center;
+}
+.contacto h1{
+    background: #fac8d0;
+    border: 2px solid #fac8d0; 
+    padding: 5px 10px; 
+    border-radius: 25px; 
+    display: inline-block; /* Para ajustar el tamaño al contenido */
+    color: #000;
+    font-weight: bold; /* Negrita para resaltar */
+    font-size: 25px;
+    text-align: center; 
+}
+.contacto p{
+    padding-top: 15px;
+font-weight: bold;
+}
+
+#contactanos {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenedor de contactanos */
+    align-items: center;
+}
+
+#contactanos p{
+    margin: 15px;
+}
+
+@media(max-width: 780px){
+    .contacto {
+        margin-top: 40px;
+    }
+}
+
+/* Estilo formulario */
+.formulario-container {
+    display: flex;
+    justify-content: center;
+}
+
+.formulario {
+    width: 500px;
+    padding: 40px;
+    background: #fac8d0;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px #f2abb7;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+/*usuario dentro del formulario */
+.formulario .usuario {
+    position: relative;
+}
+
+/* estilo de los input dentro del formulario */
+.formulario .usuario input,
+.formulario .usuario textarea {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #161515;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #0f0e0e;
+    outline: none;
+    background: transparent;
+}
+
+
+.formulario .usuario label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 16px;
+    color: #080707;
+    pointer-events: none;
+    transition: .5s;
+    padding: 0; 
+}
+
+/* Estilo del label cuando el input,c uando tienen escrito algo */
+.formulario .usuario input:focus~label,
+.formulario .usuario input:valid~label,
+.formulario .usuario textarea:focus~label,
+.formulario .usuario textarea:valid~label {
+    top: -20px;
+    left: 0;
+    color: #131212;
+    font-size: 12px;
+}
+
+
+/*testimonios*/
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.container section {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.container h2 {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+.container p{
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+/* este contenedor es de la pagina inicio*/
+#propaganda {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+}
+
+section {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    /* aca con este ajusto el tamaño máximo de la imagen*/
+    height: auto;
+    /* aca me ajusta la altura automáticamente */
+    width: 200px;
+}
